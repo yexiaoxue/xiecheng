@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable = no,
+			initial-scale=1.0, maximum-scale=1.0 , minmum-scale=1.0"/><meta name="viewport" content="width=1024, height=768,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+			<script type="text/javascript" src="js/lib-flex.js" ></script>
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="css/rest.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/swiper.min.css" />
+	<style>
+		.f{
+			position: fixed;
+			top: 1.88rem;
+			z-index: 9999;
+			height: 0.6rem;
+            width: 100%;
+	        display: flex;
+	        justify-content: space-around;
+	        font-size: 0.32rem;
+		}
+		
+	</style>
+	<body>
+		<div   id="warp" >
+			<!--头部-->
+			<div  class="headers"  >
+			<div  class="header-top">
+				<img src="img/1.png" />
+				<h1 class="header-title"  v-bind:title="zhoubianyou"> {{zhoubianyou}} </h1>
+			</div>
+			
+			<div class="header-zuobiao">
+				<div  class="header-zuobiao-img">
+				<img src="img/1.2.png" />
+				<h3 v-bind:title="shanghaizhan">{{shanghaizhan}}</h3>
+				</div>
+				<div  class="header-zhoubian">
+					<img src="img/1.3.png" />
+					<h3 v-bind:title="zhoubianmiaosha">{{zhoubianmiaosha}}</h3>
+				</div>
+				
+			</div>
+			</div>
+		 
+	<!--轮播-->	
+		<div  class="zhong">
+		 <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">  <img src="img/a1.jpg"   style="width: 100%;height: 3.7rem;"/>   </div>
+            <div class="swiper-slide"> <img src="img/a2.jpg"  style="width: 100%;height: 3.7rem;" />    </div>
+            <div class="swiper-slide">  <img src="img/a3.jpg"  style="width: 100%;height: 3.7rem;" />   </div>
+            <div class="swiper-slide">  <img src="img/a5.jpg"  style="width: 100%;height: 3.7rem;"/>   </div>
+            <div class="swiper-slide">  <img src="img/a4.jpg" style="width: 100%;height: 3.7rem;" />   </div>
+           
+        </div>
+        <div class="swiper-scrollbar"></div>
+    </div>	
+		
+	<!--中间图标-->	
+		<div  class="zhong-tubiao">
+			<div class="tubiao-first">
+			<div  class="tubiao-one">
+				<img src="img/2.1.png" />
+				<span   v-text="zijia"></span>
+			</div>
+			
+			
+			<div  class="tubiao-two"  >
+				<img src="img/2.2.png" style="margin-left: 0.2rem;"/>
+				<span>{{qingming}}</span>
+			</div>
+			
+			<div  class="tubiao-three">
+				<img src="img/2.3.png" />
+				<span>{{gentuan}}</span>
+			</div>
+			
+			<div  class="tubiao-four">
+				<img src="img/2.4.png" />
+				<span>{{yiriyou}}</span>
+			</div>
+		</div>	
+			
+		<div class="tubiao-second">
+			<div  class="tubiao-five">
+				<img src="img/2.5.png" />
+				<span>{{jingdian}}</span>
+			</div>
+			
+			
+			<div  class="tubiao-six">
+				<img src="img/2.6.png" />
+				<span>{{qinzi}}</span>
+			</div>
+			
+			<div  class="tubiao-seven">
+				<img src="img/2.7.png" />
+				<span>{{taqing}}</span>
+			</div>
+			
+			<div  class="tubiao-eight">
+				<img src="img/2.8.png" />
+				<span>{{wenquan}}</span>
+			</div>
+		</div>	
+			
+			
+	</div>
+		
+	<!--周边秒杀-->	
+		
+		<div  class="peripheral-spike">
+			<div  class="peripheral-spike-top">
+				<img src="img/a10.png" />
+				<li>{{zhoubianmiaosha}}</li>
+				<span>距离结束1天</span>
+				<div class="flash-div">
+                   <span class="or">
+                        <p id="h2"></p>
+                   </span>
+                   <span class="pi">
+                        <p id="i2"></p>
+                   </span>
+                   <span class="pk">
+                        <p id="s2"></p>
+                   </span>
+                </div>
+				<a>{{gengduo}}</a>
+			</div>
+		<div class="swiper-container-two">
+						<div class="swiper-wrapper">
+							
+							<div class="swiper-slide"  ><img src="img/b1.jpg"   />
+							<p  class="hang-p">
+								{{hangzhou}}
+							</p>
+							<span class="hang-span">
+								{{lijian}}
+							</span>
+							<span  class="hang-span-one">
+								{{span1message}}
+							</span>
+							<span  class="price">{{price}}</span>
+							<a></a>
+							</div>
+							<div class="swiper-slide" style="left:1.1rem ;" ><img src="img/b2.jpg" />
+							<p  class="hang-p">
+								{{suzhou}}
+							</p>
+							<span class="hang-span">
+								{{lijian}}
+							</span>
+							<span  class="hang-span-one">
+								{{span1message}}
+							</span>
+							<span  class="price">{{price}}</span>
+							</div>
+							<div class="swiper-slide" style="left:2.2rem ;"><img src="img/b3.jpg" />
+							
+							<p  class="hang-p">
+								{{kunshan}}
+							</p>
+							<span class="hang-span">
+								{{lijian}}
+							</span>
+							<span  class="hang-span-one">
+								{{span1message}}
+							</span>
+							<span  class="price">{{price}}</span>
+							
+							
+							
+							
+							
+							</div>
+						
+						</div>
+						<!-- 如果需要分页器 -->
+					</div>
+		
+	</div>
+		
+	<!--热门-->	
+		<div  class="remen">
+			<div  class="remen-top">
+				<img src="img/a9.png" />
+				<span>{{mudi}}</span>
+			</div>
+			<img  class="remen-img" src="img/b5.jpg"/>
+			
+		</div>
+		
+		<!--轮播-->
+		<div  class="lunbo">
+			
+		<div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">  <img src="img/c1.jpg"   style="width: 100%;height: 1.7rem;"/>   </div>
+            <div class="swiper-slide"> <img src="img/c2.jpg"  style="width: 100%;height: 1.7rem;" />    </div>
+       </div>
+        
+    </div>	
+		</div>
+		<img class="shoucang" src="img/s1.png" />
+		<img  class="zuji" src="img/s2.png" />
+	<!--跟团游-->	
+		
+		<div  class="tuanyou">
+			
+			<div  class="tuanyou-top">
+			<div class="gentuan" >
+			    <span>{{gentuanyou}}</span>
+				<font></font>
+			</div>
+			
+			<div class="yiri" >
+			    <span>一日游</span>
+				<font></font>
+			</div>
+			</div>
+			<div class="gentuan-div">
+		<div  class="gentuan-frist">
+			<div class="gentuan-frist-one">
+				<img src="img/d1.jpg" />
+				<span  class="shanghai">{{shanghaichufa}}</span>
+			</div>
+			<div class="gentuan-text">
+				<span>{{gentuantext}}</span>
+				<span   class="gentuan-prices">
+					{{gentuanprices}}
+				</span>
+				<span   class="gentuan-prices-one">
+					{{spanprice}}
+				</span>
+			</div>
+		</div>	
+			
+			
+			
+		<div  class="gentuan-frist">
+			<div class="gentuan-frist-one">
+				<img src="img/d2.jpg" />
+				<span  class="shanghai">{{shanghaichufa}}</span>
+			</div>
+			<div class="gentuan-text">
+				<span>{{gentuantext}}</span>
+				<span   class="gentuan-prices">
+					{{gentuanprices}}
+				</span>
+				<span   class="gentuan-prices-one">
+					{{spanprice}}
+				</span>
+			</div>
+		</div>	
+		
+		
+		<div  class="gentuan-frist">
+			<div class="gentuan-frist-one">
+				<img src="img/d3.jpg" />
+				<span  class="shanghai">{{shanghaichufa}}</span>
+			</div>
+			<div class="gentuan-text">
+				<span>{{gentuantext}}</span>
+				<span   class="gentuan-prices">
+					{{gentuanprices}}
+				</span>
+				<span   class="gentuan-prices-one">
+					{{spanprice}}
+				</span>
+			</div>
+		</div>
+		
+		
+		<div  class="gentuan-frist">
+			<div class="gentuan-frist-one">
+				<img src="img/d4.jpg" />
+				<span  class="shanghai">{{shanghaichufa}}</span>
+			</div>
+			<div class="gentuan-text">
+				<span>{{gentuantext}}</span>
+				<span   class="gentuan-prices">
+					{{gentuanprices}}
+				</span>
+				<span   class="gentuan-prices-one">
+					{{spanprice}}
+				</span>
+			</div>
+		</div>
+		
+		
+		<div  class="gentuan-frist">
+			<div class="gentuan-frist-one">
+				<img src="img/d5.jpg" />
+				<span  class="shanghai">{{shanghaichufa}}</span>
+			</div>
+			<div class="gentuan-text">
+				<span>{{gentuantext}}</span>
+				<span   class="gentuan-prices">
+					{{gentuanprices}}
+				</span>
+				<span   class="gentuan-prices-one">
+					{{spanprice}}
+				</span>
+			</div>
+		</div>
+		
+		<div  class="gentuan-frist">
+			<div class="gentuan-frist-one">
+				<img src="img/d6.jpg" />
+				<span  class="shanghai">{{shanghaichufa}}</span>
+			</div>
+			<div class="gentuan-text">
+				<span>{{gentuantext}}</span>
+				<span   class="gentuan-prices">
+					{{gentuanprices}}
+				</span>
+				<span   class="gentuan-prices-one">
+					{{spanprice}}
+				</span>
+			</div>
+		</div>
+		
+		
+		</div>	
+			
+		<div class="gentuan-bottom">
+			<span>{{chakan}}</span>
+		</div>		
+			
+			
+			
+			
+		</div>
+		
+<!--日游-->		
+		<div class="riyou">
+			<div class="riyou-top" >
+			<span>————  {{riyou}}  ————</span>
+		</div>
+		
+		<div>
+		<div  class="gentuan-frist">
+			<div class="gentuan-frist-one">
+				<img src="img/v1.jpg" />
+				<span  class="shanghai">{{shanghaichufa}}</span>
+			</div>
+			<div class="gentuan-text">
+				<span>{{dongfang}}</span>
+				<span   class="gentuan-prices-c">
+					{{pingfen}}
+				</span>
+				<span   class="gentuan-prices-one-c">
+					{{priceone}}  
+				</span>
+			</div>
+		</div>
+		
+		
+		<div  class="gentuan-frist">
+			<div class="gentuan-frist-one">
+				<img src="img/v2.jpg" />
+				<span  class="shanghai">{{shanghaichufa}}</span>
+			</div>
+			<div class="gentuan-text">
+				<span>{{dongfang}}</span>
+				<span   class="gentuan-prices-c">
+					{{pingfen}}
+				</span>
+				<span   class="gentuan-prices-one-c">
+					{{priceone}} 
+				</span>
+			</div>
+		</div>
+		
+		<div  class="gentuan-frist">
+			<div class="gentuan-frist-one">
+				<img src="img/v3.jpg" />
+				<span  class="shanghai">{{shanghaichufa}}</span>
+			</div>
+			<div class="gentuan-text">
+				<span>{{dongfang}}</span>
+				<span   class="gentuan-prices-c">
+					{{pingfen}}
+				</span>
+				<span   class="gentuan-prices-one-c">
+					{{priceone}} 
+				</span>
+			</div>
+		</div>
+		
+		
+		<div  class="gentuan-frist">
+			<div class="gentuan-frist-one">
+				<img src="img/v4.jpg" />
+				<span  class="shanghai">{{shanghaichufa}}</span>
+			</div>
+			<div class="gentuan-text">
+				<span>{{dongfang}}</span>
+				<span   class="gentuan-prices-c">
+					{{pingfen}}
+				</span>
+				<span   class="gentuan-prices-one-c">
+					{{priceone}} 
+				</span>
+			</div>
+		</div>
+		
+		<div  class="gentuan-frist">
+			<div class="gentuan-frist-one">
+				<img src="img/v5.jpg" />
+				<span  class="shanghai">{{shanghaichufa}}</span>
+			</div>
+			<div class="gentuan-text">
+				<span>{{dongfang}}</span>
+				<span   class="gentuan-prices-c">
+					{{pingfen}}
+				</span>
+				<span   class="gentuan-prices-one-c">
+					{{priceone}}  
+				</span>
+			</div>
+		</div>
+		
+		<div  class="gentuan-frist">
+			<div class="gentuan-frist-one">
+				<img src="img/v6.jpg" />
+				<span  class="shanghai">{{shanghaichufa}}</span>
+			</div>
+			<div class="gentuan-text">
+				<span>{{dongfang}}</span>
+				<span   class="gentuan-prices-c">
+					{{pingfen}}
+				</span>
+				<span   class="gentuan-prices-one-c">
+					{{priceone}} 
+				</span>
+			</div>
+		</div>
+		
+	</div>
+		
+		
+		
+		
+		
+		<div class="gentuan-bottom">
+			<span>{{chakanyi}}</span>
+		</div>		
+			
+		
+		
+		
+		
+		
+		
+		
+		</div>
+		
+		
+		
+		
+		
+		
+	
+		
+		
+		
+		
+		</div>	
+			
+			
+	 </div>		
+		
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+	<script type="text/javascript" src="js/swiper.min.js" ></script>
+	<script type="text/javascript" src="js/vue.js" ></script>
+	<script type="text/javascript" src="js/timecountdown.js" ></script>
+	<script type="text/javascript" src="js/index.js" ></script>
+	
+</html>
